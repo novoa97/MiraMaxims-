@@ -1,0 +1,257 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.head{
+  height: 6vh;
+  background-color: #4F5165;
+  z-index: 2
+}
+.title{
+  color : white;
+  font-size: 3vh;
+  padding-top: 1.5vh;
+  padding-left: 2vw;
+  float: left;
+}
+.filter{
+  float: right;
+}
+
+
+/* Map */
+#map {
+  height: 94vh;
+}
+.info{
+  width: 20vw;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+/* User button */
+.userbutton{
+  float: right;
+  margin-right: 0vh;
+}
+.userbutton button{
+  background-color: Transparent;
+  height: 6vh;
+  width: 12vw;
+  color: white;
+  font-size: 2vh;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+.userbutton button:hover, .userbutton button:focus {
+  background-color: #2980B9;
+}
+
+
+/* Dropdown filter*/
+.filter{
+  float: right;
+}
+.dropbtn {
+  background-color: Transparent;
+  height: 6vh;
+  width: 12vw;
+  color: white;
+  font-size: 2vh;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 12vw;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content div {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+/* User Page*/
+.login{
+  margin: auto;
+  background-color: #B8B8B8;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 40vw;
+
+}
+.login-title{
+  background-color: #259B9A;
+  color: white;
+  font-size: 3vh;
+  padding-left: 2vw;
+  height: 4vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.login-form{
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+.login label{
+  font-size: 2vh;
+}
+.login input{
+  height: 2vh !important;
+  font-size: 1.5vh;
+  display: block;
+  border: 1px solid #ccc!important;
+  width: 100%
+}
+.login button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  margin-bottom: 0
+  border: none;
+  cursor: pointer;
+  width: 20vw;
+  float: right
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #EF3B3A;
+}
+body {
+  background: #DCDCDC; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, 	#DCDCDC, 	#F8F8F8);
+  background: -moz-linear-gradient(right, 	#DCDCDC, 	#F8F8F8);
+  background: -o-linear-gradient(right, 	#DCDCDC, 	#F8F8F8);
+  background: linear-gradient(to left, 	#DCDCDC, 	#F8F8F8);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* User info */
+.user-info{
+  background: #FFFFFF;
+  width: 95vw;
+  height: 90vh;
+  margin-top: 2vh;
+  margin-left: 5vh;
+}

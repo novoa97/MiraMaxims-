@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <head>
+    <title>MiraMaxims</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="head">
+      <div class="title">
+        MiraMaxims
+      </div>
+      <div class="userbutton">
+        <button id="toUser" onclick="toUserPage()"><i class="fas fa-sign-in-alt"></i>  Accedir </button>
+        <button id="toMap" onclick="toMapPage()"><i class="fas fa-map-marked-alt"></i>  Mapa</button>
+      </div>
+      <div  id="filter" class="filter">
+        <button onclick="dropdown()" class="dropbtn"><i class="fas fa-sliders-h"></i>  Filtres</button>
+          <div id="dropdownfilter" class="dropdown-content">
+            <div>
+              <input type="checkbox" id="organization" onclick="switchFilter('organization')" checked> <label for="cbox2">Organitzacions</label>
+            </div>
+            <div>
+              <input type="checkbox" id="sick" onclick="switchFilter('sick')" checked> <label for="cbox2">Malalts</label>
+            </div>
+            <div>
+              <input type="checkbox" id="voluntary" onclick="switchFilter('voluntary')" checkedw> <label for="cbox2">Voluntaris</label>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="map"></div>
+    <!--  User Page -->
+    <div id="user">
+      <div id="user-form" class="login-page">
+        <div class="form">
+          <div class="login-form">
+            <input id="mail" type="text" placeholder="username"/>
+            <input id="password" type="password" placeholder="password"/>
+            <button onclick="login()">login</button>
+          </div>
+        </div>
+      </div>
+      <div id="user-info" class="user-info">
+        <div id="name-info">s</div>
+        <div id="email-info">s</div>
+        <button onclick="logOut()">Sortir</button>
+      </div>
+    </div>
+  </body>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR8pv_Q1GjAVFCvpb-SuvPqdy-x5B9oc4&callback=initMap" async defer></script>
+</html>
