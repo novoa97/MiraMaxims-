@@ -10,7 +10,7 @@
   <body>
     <div class="head">
       <div class="title">
-        MiraMaxims
+        MiraMàxims
       </div>
       <div class="userbutton">
         <button id="toUser" onclick="toUserPage()"><i class="fas fa-sign-in-alt"></i>  Accedir </button>
@@ -20,13 +20,13 @@
         <button onclick="dropdown()" class="dropbtn"><i class="fas fa-sliders-h"></i>  Filtres</button>
           <div id="dropdownfilter" class="dropdown-content">
             <div>
-              <input type="checkbox" id="organization" onclick="switchFilter('organization')" checked> <label for="cbox2">Organitzacions</label>
+              <input type="checkbox" id="doctor" onclick="switchFilter('doctor')" checked> <label for="cbox2">Doctors</label>
             </div>
             <div>
-              <input type="checkbox" id="sick" onclick="switchFilter('sick')" checked> <label for="cbox2">Malalts</label>
+              <input type="checkbox" id="malalt" onclick="switchFilter('malalt')" checked> <label for="cbox2">Malalts</label>
             </div>
             <div>
-              <input type="checkbox" id="voluntary" onclick="switchFilter('voluntary')" checkedw> <label for="cbox2">Voluntaris</label>
+              <input type="checkbox" id="voluntari" onclick="switchFilter('voluntari')" checked> <label for="cbox2">Voluntaris</label>
             </div>
         </div>
       </div>
@@ -43,10 +43,13 @@
           </div>
         </div>
       </div>
-      <div id="user-info" class="user-info">
-        <div id="name-info">s</div>
-        <div id="email-info">s</div>
-        <button onclick="logOut()">Sortir</button>
+      <div id="user-info" class="login-page">
+        <div class="form">
+          <img src="images/grey.jpeg" id="avatar" style="margin-bottom: 2vh" class="avatar big">
+          <div id="name-info">s</div>
+          <div id="email-info">s</div>
+          <button style="margin-top: 2vh" onclick="logOut()">Sortir</button>
+        </div>
       </div>
     </div>
   </body>

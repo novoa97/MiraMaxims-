@@ -7,6 +7,9 @@ const types = {
   doctor: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
   voluntari: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
 }
+const typesNum = {
+
+}
 
 /* Init */
 toMapPage()
@@ -45,8 +48,19 @@ function setMarkers(){
             console.log("ok")
           }
         })
+        console.log("Filters")
+        document.getElementById("malalt").checked = true
+        document.getElementById("doctor").checked = true
+        document.getElementById("malalt").checked = true
       }
   })
+}
+function deleteMarkers(){
+  if ( markers != []){
+    markers.forEach(element => {
+        element.setMap(null)
+    })
+  }
 }
 function getRole(role){
   switch (role) {
@@ -143,6 +157,7 @@ function login(){
     console.log("login")
     $.post("http://51.178.27.50:4000/api/sign_in", { email: mail, password: password})
       .done(function(response,message){
+        $("#password").val('')
         setSesion(response)
         console.log(message)
       })
@@ -177,7 +192,7 @@ function setSesion(dataUser){
   var token = dataUser["data"]["token"]
   localStorage.setItem('token', token)
   localStorage.setItem('data', JSON.stringify(dataUser["data"]))
-  activeSesion(dataUser)
+  activeSesion(dataUser["data"])
 }
 function activeSesion(dataUser){
     //Change user Page
@@ -185,8 +200,10 @@ function activeSesion(dataUser){
     $('#user-form').hide()
     console.log(JSON.stringify(dataUser))
     //Change text
+    console.log(dataUser["email"])
     $('#email-info').html(dataUser["email"])
     $('#name-info').html(dataUser["name"])
+    if (dataUser["profile_pic"])$("#avatar").attr("src", dataUser["profile_pic"]);
     $('#toUser').html('<i class="fas fa-user"></i>  User')
 }
 function disableSesion(){
